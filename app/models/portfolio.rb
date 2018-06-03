@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+  include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   # Two ways to set scopes
@@ -12,7 +13,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= "http://placehold.it/600x400"
+    self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
     # if self.main_image == nil
     #  self.main_image = "http://placehold.it/600x400"
     # so in the example: a == nil and b == 20.....
@@ -22,6 +23,6 @@ class Portfolio < ApplicationRecord
     #   a = b
     # else
     #   a
-    self.thumb_image ||= "http://placehold.it/350x200"
+    self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 end
