@@ -3,9 +3,12 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+    @page_title = "Edward's Blog"
   end
 
   def show
+    @page_title = @blog.title
+    @seo_keywords = @blog.body # add a keyword field to the blog model to optimize SEO
   end
 
   def new
