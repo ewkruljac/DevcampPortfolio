@@ -28,6 +28,7 @@ class PortfoliosController < ApplicationController
 
   def edit
     @portfolio_item = Portfolio.find(params[:id])
+
   end
 
   def update
@@ -63,6 +64,4 @@ class PortfoliosController < ApplicationController
                                         technologies_attributes: [:name]
                                         ) 
     end
-
-
 end
