@@ -21,6 +21,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.topic_id = 1 # Take this out when topics get integrated with blog items
 
     respond_to do |format|
       if @blog.save
