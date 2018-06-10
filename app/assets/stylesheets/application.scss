@@ -116,6 +116,15 @@ body {
   text-align: left;
 }
 
+.card-block {
+  color: black;
+  text-align: left;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .auth-links a {
   color: black;
 }
@@ -123,3 +132,16 @@ body {
 .register-text {
   text-align: right;
 }
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
+
+
+
+
+
+
+
