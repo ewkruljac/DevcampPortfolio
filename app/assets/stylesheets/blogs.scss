@@ -130,3 +130,25 @@ h1, h2, h3, h4, h5, h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+* My styles
+*/
+
+.btn-outline-primary {
+  margin-left: 5px;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.navbar-toggler-icon {
+  /*background-color: #6699ff;*/
+  background-color: #007bff;
+  opacity: .6; 
+}
+
+.text-blue {
+  color: #007bff;
+}
