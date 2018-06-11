@@ -3,13 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <META name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -18,26 +15,14 @@
     <div class="container">
       <%= render 'shared/blog_nav' %>
     </div>
-
     <main role="main" class="container">
       <div class="row">
-
         <%= yield %>
-
         <%= render "shared/blog_sidebar" %>
-
       </div>
-
       <%= source_helper('blog') %>
-
     </main>
-
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
+    <%= render 'shared/blog_footer' %>
   </body>
 </html>
   
