@@ -39,3 +39,46 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/*
+* Custom styles
+*/
+
+.btn-outline-primary {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.navbar-toggler-icon {
+  /*background-color: #6699ff;*/
+  background-color: #007bff;
+  opacity: .6; 
+}
+
+.text-blue {
+  color: #007bff;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+.app-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.app-footer p:last-child {
+  margin-bottom: 0;
+}
