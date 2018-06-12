@@ -6,6 +6,7 @@
       <%= link_to "About Me", about_me_path, class: 'btn btn-primary' %>
       <%= link_to "My Blog", blogs_path, class: 'btn btn-secondary' %>
       <%= link_to "Contact Me", contact_path, class: 'btn btn-info' %>
+      <%= link_to "All Portfolio Items", portfolios_path, class: 'btn btn-info' unless current_page? portfolios_path %>
     </p>
   </div>
 </section>

@@ -5,10 +5,7 @@
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-light p-4">
             <ul class="list-unstyled">
-              <li><%= link_to "Home", root_path, class: "p-2 text-blue" %></li>
-              <li><%= link_to "About Me", about_me_path, class: "p-2 text-blue" %></li>
-              <li><%= link_to "Contact", contact_path, class: "p-2 text-blue" %></li>
-              <li><%= link_to "Blog", blogs_path, class: "p-2 text-blue" %></li>
+              <%= nav_helper 'p-2 text-blue', 'li' %>
             </ul>
           </div>
         </div>
@@ -27,7 +24,7 @@
     </div>
   </div>
 </header>
-
+  
 
 
 

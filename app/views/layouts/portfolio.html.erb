@@ -6,37 +6,23 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <META name="keywords" content="<%= @seo_keywords %>" />
-
-
     <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <!-- start of navbar -->
-    <%= render 'shared/portfolio_nav' %>
+    <div class="container">
+      <%= render 'shared/portfolio_nav' %>
+    </div>
     <hr>
-    <!-- end of navbar -->
-
     <main role="main">
-
-    <!-- start of masthead -->
-
-    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
-
-    <!-- end of masthead -->
-
+      <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
       <%= yield %>
-
       <%= source_helper('application') %>
-    <!-- start of footer -->
+    </main>
 
     <%= render 'shared/footer' %>
-
-
-    <!-- end of footer -->
   </body>
 </html>
   
