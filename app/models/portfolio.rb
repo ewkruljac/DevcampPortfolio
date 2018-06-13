@@ -12,7 +12,7 @@ class Portfolio < ApplicationRecord
   end
 
   def self.by_position
-    order("position ASC")
+    order("position ASC").limit(9)
   end
 
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
