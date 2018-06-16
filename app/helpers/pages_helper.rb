@@ -1,7 +1,5 @@
 module PagesHelper
   def twitter_parser_helper(tweet)
-    tweet = @tweets.first
-
     regex = %r{
       \b
       (
