@@ -13,11 +13,15 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
     
-    @page_title = @blog.title
-    @seo_keywords = @blog.body # add a keyword field to the blog model to optimize SEO
+      @page_title = @blog.title
+      @seo_keywords = @blog.body # add a keyword field to the blog model to optimize SEO
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access this page."
+    end
   end
 
   def new
