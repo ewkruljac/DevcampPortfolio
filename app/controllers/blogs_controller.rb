@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.recent.page(params[:page]).per(5)
     @page_title = "Edward's Blog"
   end
 
@@ -62,6 +62,10 @@ class BlogsController < ApplicationController
     end
     
     redirect_to blogs_url, notice: "Post status has been updated."
+  end
+
+  def recent
+    Blog.order(created_at: :desc)
   end
 
   private
