@@ -2,10 +2,20 @@
 @import "jquery-ui";
 @import "gritter";
 
+@font-face {
+  font-family: 'Montserrat';
+  src:font-url('Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:font-url('Roboto-Regular.ttf');
+}
+
 :root {
   --jumbotron-padding-y: 3rem;
 }
- 
+
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
@@ -41,6 +51,19 @@ footer p {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 /*
 * Custom styles
