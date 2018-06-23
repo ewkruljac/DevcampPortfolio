@@ -6,10 +6,10 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <META name="keywords" content="<%= @seo_keywords %>" />
 
-
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -33,8 +33,6 @@
 
       <%= render 'shared/footer' %>
       <%= alerts %>
-      <%= source_helper('application')%>
     </div>
   </body>
 </html>
-  
