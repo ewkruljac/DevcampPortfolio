@@ -6,7 +6,9 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
     <META name="keywords" content="<%= @seo_keywords %>" />
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,10 +22,8 @@
         <%= yield %>
         <%= render "shared/blog_sidebar" %>
       </div>
-      <%= source_helper('blog') %>
     </main>
     <%= alerts %>
     <%= render 'shared/footer' %>
   </body>
 </html>
-  
